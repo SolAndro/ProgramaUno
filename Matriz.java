@@ -1,5 +1,3 @@
-package com.arianasantiago.matriz;
-
 public class Matriz 
 {
 
@@ -7,27 +5,22 @@ public class Matriz
 	{
 		// TODO Auto-generated method stub
 		//declaro matriz
-		int[] mimatriz=new int[10];
+		int[][] mimatriz=new int[4][4];
 		//declaro variables para mi operacion
-		int a=10;
-		int b=5;
+		int a=2;
 		//bucle for para llenar matriz:mi matriz
 		for( int i=0;i<mimatriz.length;i++)
 		{
-			mimatriz[i]=a;
-			//imprimo matriz
-			System.out.println("mi matriz[" +i+"]"+"   su valor es: " + mimatriz[i]);
-			//realizo operacion
-			a+=b*4/2;
+			System.out.print((i+1)+" ");
+			for(int j=0;j<mimatriz.length;j++)
+			{	
+						mimatriz[i][j]=a;
+						System.out.print(" "+mimatriz[i][j]);
+						a+=2;	
+			}
+			System.out.print("\n");						
 		}
-		
-		System.out.println("             Usando un foreach vuelvo a imprimir valores de mi arreglo:");
-		
-		for(int m:mimatriz)
-		{
-			System.out.println(m);
-		}
-		
+			
 	}
 
 }
